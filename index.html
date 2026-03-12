@@ -8,7 +8,6 @@
 <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHJ4PSI3IiBmaWxsPSIjMGYwZjEyIi8+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBlNWEwIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC40Ii8+CiAgPHRleHQgeD0iMTYiIHk9IjEzIiBmb250LWZhbWlseT0iR2VvcmdpYSwgc2VyaWYiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iNy41IiBmaWxsPSIjMDBlNWEwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMC4zIj5NZDwvdGV4dD4KICA8dGV4dCB4PSIxNiIgeT0iMjIiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNlOGU4ZjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIwLjMiPkZhaXo8L3RleHQ+Cjwvc3ZnPg==" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<!-- CHANGED: New font pairing — Playfair Display for headings, DM Mono for body -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
 <style>
   :root {
@@ -21,12 +20,10 @@
     --text: #e8e8f0;
     --muted: #5a5a72;
     --dim: #2e2e3a;
-    /* CHANGED: New font variables */
     --font-display: 'Playfair Display', Georgia, serif;
     --font-mono: 'DM Mono', 'Courier New', monospace;
   }
 
-  /* ── LIGHT MODE ── */
   html.light {
     --bg: #fafaf8;
     --bg2: #f2f2ef;
@@ -39,7 +36,6 @@
     --dim: #a0a0aa;
   }
 
-  /* ── THEME TOGGLE BUTTON ── */
   .theme-toggle {
     display: flex;
     align-items: center;
@@ -59,11 +55,7 @@
     background: rgba(0,229,160,0.04);
   }
 
-  .theme-icon-wrap {
-    font-size: 13px;
-    line-height: 1;
-    flex-shrink: 0;
-  }
+  .theme-icon-wrap { font-size: 13px; line-height: 1; flex-shrink: 0; }
 
   .theme-toggle-label {
     font-size: 9px;
@@ -72,7 +64,6 @@
     color: var(--muted);
   }
 
-  /* Mobile topbar theme toggle */
   .mobile-theme-toggle {
     display: flex;
     align-items: center;
@@ -94,11 +85,9 @@
   .theme-icon { line-height: 1; }
   .icon-moon { display: block; }
   .icon-sun  { display: none; }
-
   html.light .icon-moon { display: none; }
   html.light .icon-sun  { display: block; }
 
-  /* Smooth theme transition */
   *, *::before, *::after {
     transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
   }
@@ -107,7 +96,6 @@
   html.light ::-webkit-scrollbar-thumb { background: var(--border); }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -121,19 +109,16 @@
 
   ::selection { background: var(--accent); color: #000; }
 
-  /* SCROLLBAR */
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
   ::-webkit-scrollbar-thumb { background: var(--dim); border-radius: 2px; }
 
-  /* ── LAYOUT ── */
   .layout {
     display: grid;
     grid-template-columns: 220px 1fr;
     min-height: 100vh;
   }
 
-  /* ── SIDEBAR ── */
   .sidebar {
     position: sticky;
     top: 0;
@@ -207,7 +192,6 @@
     border-color: rgba(0, 229, 160, 0.15);
   }
 
-  /* Email link in sidebar nav */
   .nav a.nav-email {
     font-size: 9px;
     letter-spacing: 0.06em;
@@ -234,7 +218,6 @@
     50% { opacity: 0.3; }
   }
 
-  /* ── MAIN ── */
   main { overflow: hidden; }
 
   section {
@@ -243,7 +226,6 @@
     position: relative;
   }
 
-  /* SECTION LABEL */
   .sec-label {
     font-size: 10px;
     letter-spacing: 0.2em;
@@ -263,7 +245,6 @@
     background: var(--accent);
   }
 
-  /* ── HERO ── */
   #about {
     display: flex;
     flex-direction: column;
@@ -358,7 +339,6 @@
     color: var(--accent);
   }
 
-  /* HERO DECORATION */
   .hero-deco {
     position: absolute;
     top: 3rem;
@@ -371,7 +351,6 @@
 
   .hero-deco .code-comment { color: var(--accent2); }
 
-  /* SKILLS GRID */
   .skills-area {
     margin-top: 5rem;
     display: grid;
@@ -414,10 +393,7 @@
     border-color: var(--accent2);
   }
 
-  /* ── JOURNEY ── */
   #journey { padding: 5rem 4rem; min-height: auto; }
-
-  /* ── WORK ── */
   #work { padding: 5rem 4rem; min-height: auto; }
 
   .work-header {
@@ -472,7 +448,6 @@
     margin-bottom: 0.4rem;
   }
 
-  /* CHANGED: Project date range display */
   .project-dates {
     font-size: 10px;
     color: var(--muted);
@@ -598,6 +573,7 @@
     text-transform: uppercase;
     margin-bottom: 0.5rem;
   }
+
   .tl-meta {
     display: flex;
     align-items: center;
@@ -605,9 +581,9 @@
     margin-bottom: 0.5rem;
     flex-wrap: wrap;
   }
-  .tl-meta .tl-date {
-    margin-bottom: 0;
-  }
+
+  .tl-meta .tl-date { margin-bottom: 0; }
+
   .tl-location {
     font-size: 10px;
     color: var(--muted);
@@ -654,10 +630,7 @@
     font-size: 10px;
   }
 
-  /* ── TIMELINE COMPANY GROUP ── */
-  .tl-company-group {
-    position: relative;
-  }
+  .tl-company-group { position: relative; }
 
   .tl-company-name {
     font-size: 1rem !important;
@@ -678,10 +651,7 @@
     transition: border-color 0.2s;
   }
 
-  .tl-subrole:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
+  .tl-subrole:last-child { margin-bottom: 0; padding-bottom: 0; }
 
   .tl-subrole::before {
     content: '';
@@ -729,13 +699,8 @@
     white-space: nowrap;
   }
 
-  .tl-subrole .tl-bullets {
-    margin-bottom: 0.75rem;
-  }
-
-  .tl-subrole .tl-tech {
-    margin-top: 0.6rem;
-  }
+  .tl-subrole .tl-bullets { margin-bottom: 0.75rem; }
+  .tl-subrole .tl-tech { margin-top: 0.6rem; }
 
   .tl-tech {
     display: flex;
@@ -755,7 +720,6 @@
     color: var(--accent);
   }
 
-  /* EDUCATION */
   .edu-card {
     margin-top: 3rem;
     padding: 2rem;
@@ -782,10 +746,7 @@
     margin-bottom: 0.5rem;
   }
 
-  .edu-detail {
-    font-size: 11px;
-    color: var(--dim);
-  }
+  .edu-detail { font-size: 11px; color: var(--dim); }
 
   .edu-grade {
     font-family: var(--font-display);
@@ -805,7 +766,6 @@
     letter-spacing: 0.1em;
   }
 
-  /* ── CONNECT ── */
   #connect {
     min-height: auto;
     padding: 5rem 4rem;
@@ -862,7 +822,6 @@
     text-align: center;
   }
 
-  /* NOISE OVERLAY */
   body::before {
     content: '';
     position: fixed;
@@ -873,7 +832,6 @@
     opacity: 0.4;
   }
 
-  /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -885,7 +843,6 @@
   .hero-cta { animation: fadeUp 0.6s 0.3s ease both; }
   .skills-area { animation: fadeUp 0.6s 0.4s ease both; }
 
-  /* CURSOR BLINK */
   .cursor::after {
     content: '▮';
     color: var(--accent);
@@ -899,11 +856,31 @@
     50% { opacity: 0; }
   }
 
-  /* ── IDEAS ── */
+  /* ── IDEAS CAROUSEL ── */
   #ideas { padding: 5rem 4rem; min-height: auto; }
 
-  .idea-card {
+  .ideas-carousel-wrap {
+    position: relative;
     margin-top: 3rem;
+  }
+
+  .ideas-carousel {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .ideas-track {
+    display: flex;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+  }
+
+  .idea-slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+
+  .idea-card {
     border: 1px solid var(--border);
     background: var(--bg2);
     border-radius: 4px;
@@ -917,6 +894,93 @@
     top: 0; left: 0; right: 0;
     height: 2px;
     background: linear-gradient(90deg, var(--accent), transparent);
+  }
+
+  /* FakeOffice — yellow/black theme with portfolio structure */
+  .idea-card.fakeoffice {
+    background: #0d0d08;
+    border-color: #2a2a14;
+  }
+
+  .idea-card.fakeoffice::before {
+    background: linear-gradient(90deg, #f0c030, #c49a10, transparent);
+  }
+
+  .idea-card.fakeoffice .idea-header .idea-badge {
+    border-color: #2a2a14;
+    background: #151508;
+    color: #a09050;
+  }
+
+  .idea-card.fakeoffice .idea-title {
+    color: #f5f0d8;
+  }
+
+  .idea-card.fakeoffice .idea-tagline {
+    color: #f0c030;
+    border-bottom-color: #2a2a14;
+  }
+
+  .idea-card.fakeoffice .idea-desc {
+    border-bottom-color: #2a2a14;
+    color: #8a8060;
+  }
+
+  .idea-card.fakeoffice .idea-desc strong { color: #f5f0d8; }
+  .idea-card.fakeoffice .idea-desc em { color: #f0c030; font-style: normal; }
+
+  .idea-card.fakeoffice .idea-highlights {
+    background: #2a2a14;
+  }
+
+  .idea-card.fakeoffice .idea-highlight {
+    background: #0d0d08;
+  }
+
+  .idea-card.fakeoffice .idea-highlight:hover {
+    background: #151508;
+  }
+
+  .idea-card.fakeoffice .idea-highlight-title { color: #f5f0d8; }
+  .idea-card.fakeoffice .idea-highlight-desc { color: #8a8060; }
+
+  .idea-card.fakeoffice .idea-footer {
+    border-top-color: #2a2a14;
+  }
+
+  .idea-card.fakeoffice .idea-tag {
+    background: rgba(240,192,48,0.07);
+    border-color: rgba(240,192,48,0.25);
+    color: #f0c030;
+  }
+
+  .idea-card.fakeoffice .idea-status {
+    color: #f0c030;
+  }
+
+  .idea-card.fakeoffice .idea-status .status-dot {
+    background: #f0c030;
+    box-shadow: 0 0 6px rgba(240,192,48,0.5);
+  }
+
+  .idea-card.fakeoffice .idea-live-link {
+    border-color: rgba(240,192,48,0.3);
+    color: #f0c030;
+  }
+
+  .idea-card.fakeoffice .idea-live-link:hover {
+    border-color: #f0c030;
+    color: #fff8d6;
+    background: rgba(240,192,48,0.08);
+  }
+
+  .idea-card.fakeoffice .idea-cta-text a {
+    color: #f0c030;
+  }
+
+  /* RoastMaster card gets a red top bar */
+  .idea-card.roast::before {
+    background: linear-gradient(90deg, #ff3b3b, transparent);
   }
 
   .idea-header {
@@ -949,6 +1013,9 @@
     gap: 0.4rem;
   }
 
+  .idea-status.live-status { color: #ff3b3b; }
+  .idea-status.live-status .status-dot { background: #ff3b3b; }
+
   .idea-title {
     font-family: var(--font-display);
     font-size: clamp(2rem, 5vw, 3.5rem);
@@ -968,6 +1035,8 @@
     border-bottom: 1px solid var(--border);
   }
 
+  .idea-card.roast .idea-tagline { color: #ff6b6b; }
+
   .idea-desc {
     font-size: 13px;
     color: var(--muted);
@@ -979,6 +1048,7 @@
 
   .idea-desc strong { color: var(--text); font-weight: 600; }
   .idea-desc em { color: var(--accent); font-style: normal; }
+  .idea-card.roast .idea-desc em { color: #ff6b6b; }
 
   .idea-highlights {
     display: grid;
@@ -1030,11 +1100,7 @@
     border-top: 1px solid var(--border);
   }
 
-  .idea-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
+  .idea-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
   .idea-tag {
     font-size: 9px;
@@ -1047,9 +1113,103 @@
     color: var(--accent);
   }
 
-  .idea-cta-text {
-    font-size: 11px;
+  .idea-card.roast .idea-tag {
+    background: rgba(255,59,59,0.05);
+    border-color: rgba(255,59,59,0.25);
+    color: #ff6b6b;
+  }
+
+  .idea-cta-text { font-size: 11px; color: var(--muted); }
+
+  /* Carousel Controls */
+  .carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+  }
+
+  .carousel-dots {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .carousel-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--dim);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.25s;
+  }
+
+  .carousel-dot.active {
+    background: var(--accent);
+    width: 20px;
+    border-radius: 3px;
+  }
+
+  .carousel-arrows {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .carousel-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: transparent;
     color: var(--muted);
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+
+  .carousel-arrow:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(0,229,160,0.04);
+  }
+
+  .carousel-counter {
+    font-size: 10px;
+    color: var(--dim);
+    letter-spacing: 0.1em;
+  }
+
+  .carousel-counter span { color: var(--accent); }
+
+  /* Idea live link button */
+  .idea-live-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    transition: all 0.2s;
+  }
+
+  .idea-live-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .idea-card.roast .idea-live-link:hover {
+    border-color: #ff3b3b;
+    color: #ff3b3b;
   }
 
   /* ── MOBILE TOPBAR ── */
@@ -1109,20 +1269,10 @@
     transform-origin: center;
   }
 
-  .hamburger.open span:nth-child(1) {
-    transform: translateY(6.5px) rotate(45deg);
-    background: var(--accent);
-  }
-  .hamburger.open span:nth-child(2) {
-    opacity: 0;
-    transform: scaleX(0);
-  }
-  .hamburger.open span:nth-child(3) {
-    transform: translateY(-6.5px) rotate(-45deg);
-    background: var(--accent);
-  }
+  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); background: var(--accent); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); background: var(--accent); }
 
-  /* ── MOBILE DRAWER ── */
   .mobile-drawer {
     display: none;
     position: fixed;
@@ -1138,11 +1288,7 @@
     transition: transform 0.25s ease, opacity 0.25s ease;
   }
 
-  .mobile-drawer.open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: all;
-  }
+  .mobile-drawer.open { transform: translateY(0); opacity: 1; pointer-events: all; }
 
   .mobile-drawer .nav {
     display: flex;
@@ -1180,7 +1326,6 @@
     border-color: rgba(0, 229, 160, 0.15);
   }
 
-  /* CHANGED: Quick email link in mobile drawer */
   .mobile-drawer .nav a.nav-email {
     font-size: 10px;
     text-transform: none;
@@ -1207,7 +1352,6 @@
     gap: 0.5rem;
   }
 
-  /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .layout { grid-template-columns: 1fr; }
     .sidebar { display: none; }
@@ -1254,7 +1398,6 @@
 </div>
 
 <!-- MOBILE DRAWER -->
-<!-- CHANGED: Journey at 02, Work at 03, email link added -->
 <div class="mobile-drawer" id="mobileDrawer">
   <nav class="nav">
     <a href="#about" data-num="01" class="active">About</a>
@@ -1272,7 +1415,6 @@
 <div class="layout">
 
   <!-- SIDEBAR -->
-  <!-- CHANGED: Journey at 02, Work at 03 -->
   <aside class="sidebar">
     <div class="logo">Md.<span>Faiz</span></div>
     <div class="tagline">Fullstack Developer</div>
@@ -1359,7 +1501,6 @@
       </div>
     </section>
 
-    <!-- CHANGED: Journey now at position 2 (before Work) -->
     <!-- JOURNEY -->
     <section id="journey">
       <div class="sec-label">Experience & Education</div>
@@ -1367,8 +1508,8 @@
 
       <div class="timeline" style="margin-top:3rem" id="timeline-container">
 
-        <!-- Kafas Software — grouped company block -->
-        <div class="timeline-item tl-company-group" data-start="2024-10" data-end="present">
+        <!-- Kafas Software — LWD: 15 Mar 2026 -->
+        <div class="timeline-item tl-company-group" data-start="2024-10" data-end="2026-03">
           <div class="tl-meta">
             <div class="tl-date" data-label></div>
             <div class="tl-location">🌐 Dubai · Remote</div>
@@ -1379,7 +1520,7 @@
           <div class="tl-subrole">
             <div class="tl-subrole-header">
               <div class="tl-subrole-title">Sr. Frontend Developer</div>
-              <div class="tl-subrole-date">Apr 2025 — Present</div>
+              <div class="tl-subrole-date">Apr 2025 — Mar 2026</div>
             </div>
             <ul class="tl-bullets">
               <li>Architected and built a full Property Sales & Purchase Management System — listings, transactions, buyer/seller flows, commission tracking, and detailed reporting dashboards.</li>
@@ -1502,7 +1643,6 @@
       </div>
     </section>
 
-    <!-- CHANGED: Work now at position 3 (after Journey) -->
     <!-- WORK -->
     <section id="work">
       <div class="work-header">
@@ -1514,9 +1654,7 @@
 
       <div class="project-grid">
 
-        <!-- CHANGED: Added date ranges for all projects -->
         <div class="project-card">
-
           <div class="project-dates">
             <span class="date-from">1 Jul 2025</span>
             <span class="date-sep">→</span>
@@ -1541,7 +1679,6 @@
         </div>
 
         <div class="project-card">
-
           <div class="project-dates">
             <span class="date-from">2 Feb 2025</span>
             <span class="date-sep">→</span>
@@ -1566,7 +1703,6 @@
         </div>
 
         <div class="project-card">
-
           <div class="project-dates">
             <span class="date-from">Apr 2025</span>
             <span class="date-sep">→</span>
@@ -1593,7 +1729,6 @@
         </div>
 
         <div class="project-card">
-
           <div class="project-dates">
             <span class="date-from">4 Dec 2023</span>
             <span class="date-sep">→</span>
@@ -1618,7 +1753,6 @@
         </div>
 
         <div class="project-card">
-
           <div class="project-dates">
             <span class="date-from">4 Jul 2023</span>
             <span class="date-sep">→</span>
@@ -1643,66 +1777,167 @@
       </div>
     </section>
 
-    <!-- IDEAS -->
+    <!-- IDEAS — Carousel -->
     <section id="ideas">
       <div class="sec-label">Building on the Side</div>
       <h2 class="section-title">Ideas</h2>
 
-      <div class="idea-card">
-        <div class="idea-header">
-          <div class="idea-badge">💡 Concept Stage</div>
-          <div class="idea-status"><span class="status-dot"></span>In Progress</div>
-        </div>
+      <div class="ideas-carousel-wrap">
+        <div class="ideas-carousel">
+          <div class="ideas-track" id="ideasTrack">
 
-        <h3 class="idea-title">FakeOffice</h3>
-        <p class="idea-tagline">A real office. For a fake workday. With real people.</p>
+            <!-- Slide 1: FakeOffice -->
+            <div class="idea-slide">
+              <div class="idea-card fakeoffice">
+                <div class="idea-header">
+                  <div class="idea-badge">🏢 Coworking · Concept Stage</div>
+                  <div class="idea-status"><span class="status-dot"></span>In Progress</div>
+                </div>
 
-        <p class="idea-desc">
-          Remote work is great — until it isn't. After months of WFH, the walls start closing in.
-          <strong>FakeOffice</strong> is a drop-in coworking concept designed for people who just need to
-          <em>get out of the house</em> for a day — without the commitment of a permanent desk or membership.
-        </p>
+                <h3 class="idea-title">FakeOffice</h3>
+                <p class="idea-tagline">A real office. For a fake workday. With real people.</p>
 
-        <div class="idea-highlights">
-          <div class="idea-highlight">
-            <div class="idea-highlight-icon">🏢</div>
-            <div>
-              <div class="idea-highlight-title">Show up. Work. Leave.</div>
-              <div class="idea-highlight-desc">Book a spot for a day — no subscriptions, no long-term contracts. Just a desk, good wifi, and coffee.</div>
-            </div>
-          </div>
-          <div class="idea-highlight">
-            <div class="idea-highlight-icon">🤝</div>
-            <div>
-              <div class="idea-highlight-title">Collaborate with strangers</div>
-              <div class="idea-highlight-desc">Every day is a new mix of engineers, designers, writers, and founders. Share ideas, get unstuck, make connections.</div>
-            </div>
-          </div>
-          <div class="idea-highlight">
-            <div class="idea-highlight-icon">🧠</div>
-            <div>
-              <div class="idea-highlight-title">Built for tech enthusiasts</div>
-              <div class="idea-highlight-desc">Curated for people who think deeply and build things. Optional evening sessions for demos, talks, and side-project pitches.</div>
-            </div>
-          </div>
-          <div class="idea-highlight">
-            <div class="idea-highlight-icon">🏠</div>
-            <div>
-              <div class="idea-highlight-title">Escape the home trap</div>
-              <div class="idea-highlight-desc">WFH blurs work and rest. FakeOffice gives you the mental separation — a "third place" that's neither home nor a traditional office.</div>
-            </div>
-          </div>
-        </div>
+                <p class="idea-desc">
+                  Remote work is great — until it isn't. After months of WFH, the walls start closing in.
+                  <strong>FakeOffice</strong> is a drop-in coworking concept designed for people who just need to
+                  <em>get out of the house</em> for a day — without the commitment of a permanent desk or membership.
+                </p>
 
-        <div class="idea-footer">
-          <div class="idea-tags">
-            <span class="idea-tag">Coworking</span>
-            <span class="idea-tag">Community</span>
-            <span class="idea-tag">Remote Work</span>
-            <span class="idea-tag">Tech Culture</span>
-            <span class="idea-tag">Side Project</span>
+                <div class="idea-highlights">
+                  <div class="idea-highlight">
+                    <div class="idea-highlight-icon">🏢</div>
+                    <div>
+                      <div class="idea-highlight-title">Show up. Work. Leave.</div>
+                      <div class="idea-highlight-desc">Book a spot for a day — no subscriptions, no long-term contracts. Just a desk, good wifi, and coffee.</div>
+                    </div>
+                  </div>
+                  <div class="idea-highlight">
+                    <div class="idea-highlight-icon">🤝</div>
+                    <div>
+                      <div class="idea-highlight-title">Collaborate with strangers</div>
+                      <div class="idea-highlight-desc">Every day is a new mix of engineers, designers, writers, and founders. Share ideas, get unstuck, make connections.</div>
+                    </div>
+                  </div>
+                  <div class="idea-highlight">
+                    <div class="idea-highlight-icon">🧠</div>
+                    <div>
+                      <div class="idea-highlight-title">Built for tech enthusiasts</div>
+                      <div class="idea-highlight-desc">Curated for people who think deeply and build things. Optional evening sessions for demos, talks, and side-project pitches.</div>
+                    </div>
+                  </div>
+                  <div class="idea-highlight">
+                    <div class="idea-highlight-icon">🏠</div>
+                    <div>
+                      <div class="idea-highlight-title">Escape the home trap</div>
+                      <div class="idea-highlight-desc">WFH blurs work and rest. FakeOffice gives you the mental separation — a "third place" that's neither home nor a traditional office.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="idea-footer">
+                  <div class="idea-tags">
+                    <span class="idea-tag">Coworking</span>
+                    <span class="idea-tag">Community</span>
+                    <span class="idea-tag">Remote Work</span>
+                    <span class="idea-tag">Tech Culture</span>
+                    <span class="idea-tag">Side Project</span>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+                    <a href="https://faiz-ansari-afk.github.io/fakeoffice/" class="idea-live-link" target="_blank">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                      Visit Site
+                    </a>
+                    <p class="idea-cta-text">Interested? <a href="#connect" style="color:var(--accent); text-decoration:none;">Let's talk →</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: RoastMaster -->
+            <div class="idea-slide">
+              <div class="idea-card roast">
+                <div class="idea-header">
+                  <div class="idea-badge">🔥 AI Chatbot · Live</div>
+                  <div class="idea-status live-status"><span class="status-dot" style="background:#ff3b3b;"></span>Deployed</div>
+                </div>
+
+                <h3 class="idea-title">RoastMaster</h3>
+                <p class="idea-tagline">Every question deserves a burn. Koi mercy nahi.</p>
+
+                <p class="idea-desc">
+                  An AI chatbot with <em>zero chill</em> — powered by meme culture and Hinglish energy.
+                  Ask it anything and get absolutely <strong>roasted back</strong>. Whether it's a tech question, life advice, or pure bakwaas, RoastMaster responds with sharp wit, desi humour, and peak internet energy.
+                  Sessions and full chat history are persisted in <strong>Firebase</strong> — so your roasts are saved, your shame is eternal.
+                </p>
+
+                <div class="idea-highlights">
+                  <div class="idea-highlight">
+                    <div class="idea-highlight-icon">🌶️</div>
+                    <div>
+                      <div class="idea-highlight-title">Pure Hinglish Mode</div>
+                      <div class="idea-highlight-desc">Responds in that perfect mix of Hindi + English that only desis understand. "Bhai seriously pooch raha hai kya?"</div>
+                    </div>
+                  </div>
+                  <div class="idea-highlight">
+                    <div class="idea-highlight-icon">😂</div>
+                    <div>
+                      <div class="idea-highlight-title">Meme-tier Responses</div>
+                      <div class="idea-highlight-desc">Every reply is crafted like a Twitter ratio or a Reddit reply guy. Peak internet humour, no filter.</div>
+                    </div>
+                  </div>
+                  <div class="idea-highlight">
+                    <div class="idea-highlight-icon">🔥</div>
+                    <div>
+                      <div class="idea-highlight-title">Firebase Session Memory</div>
+                      <div class="idea-highlight-desc">Each chat session is stored in Firebase Firestore. Switch devices, revisit old roasts — your full history stays intact.</div>
+                    </div>
+                  </div>
+                  <div class="idea-highlight">
+                    <div class="idea-highlight-icon">💬</div>
+                    <div>
+                      <div class="idea-highlight-title">Persistent Chat History</div>
+                      <div class="idea-highlight-desc">Sessions managed per user via Firebase — multiple conversations, each roast thread saved independently. Koi data nahi jaata.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="idea-footer">
+                  <div class="idea-tags">
+                    <span class="idea-tag">AI</span>
+                    <span class="idea-tag">Hinglish</span>
+                    <span class="idea-tag">Memes</span>
+                    <span class="idea-tag">Chatbot</span>
+                    <span class="idea-tag">Roast</span>
+                    <span class="idea-tag">Firebase</span>
+                    <span class="idea-tag">Side Project</span>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+                    <a href="https://roastmaster-phi.vercel.app/chat" class="idea-live-link" target="_blank" style="border-color:rgba(255,59,59,0.3);color:#ff6b6b;">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                      Get Roasted →
+                    </a>
+                    <p class="idea-cta-text">Want to collab? <a href="#connect" style="color:#ff6b6b; text-decoration:none;">Let's talk →</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /ideas-track -->
+        </div><!-- /ideas-carousel -->
+
+        <!-- Carousel Controls -->
+        <div class="carousel-controls">
+          <div style="display:flex;align-items:center;gap:1rem;">
+            <div class="carousel-dots" id="carouselDots">
+              <button class="carousel-dot active" data-index="0" aria-label="FakeOffice"></button>
+              <button class="carousel-dot" data-index="1" aria-label="RoastMaster"></button>
+            </div>
+            <span class="carousel-counter"><span id="carouselCurrent">1</span> / 2</span>
           </div>
-          <p class="idea-cta-text">Interested or want to collab on this? <a href="#connect" style="color:var(--accent); text-decoration:none;">Let's talk →</a></p>
+          <div class="carousel-arrows">
+            <button class="carousel-arrow" id="carouselPrev" aria-label="Previous idea">←</button>
+            <button class="carousel-arrow" id="carouselNext" aria-label="Next idea">→</button>
+          </div>
         </div>
       </div>
     </section>
@@ -1821,7 +2056,6 @@
   const mobileThemeToggle = document.getElementById('mobileThemeToggle');
   const themeLabel = document.getElementById('themeLabel');
 
-  // Load saved preference
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'light') {
     html.classList.add('light');
@@ -1847,7 +2081,6 @@
     hamburger.setAttribute('aria-expanded', isOpen);
   });
 
-  // Close drawer when a nav link is clicked
   drawer.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       drawer.classList.remove('open');
@@ -1855,7 +2088,6 @@
     });
   });
 
-  // Sync drawer active state with sidebar active state on scroll
   const drawerLinks = drawer.querySelectorAll('a[href^="#"]');
   function syncDrawerActive() {
     const scrollY = window.scrollY;
@@ -1870,6 +2102,46 @@
   }
   window.addEventListener('scroll', syncDrawerActive, { passive: true });
   syncDrawerActive();
+
+  // ── Ideas Carousel ────────────────────────────────────────
+  const track = document.getElementById('ideasTrack');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const prevBtn = document.getElementById('carouselPrev');
+  const nextBtn = document.getElementById('carouselNext');
+  const currentLabel = document.getElementById('carouselCurrent');
+  let currentSlide = 0;
+  const totalSlides = 2;
+
+  function goToSlide(index) {
+    currentSlide = (index + totalSlides) % totalSlides;
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+    currentLabel.textContent = currentSlide + 1;
+  }
+
+  prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+  nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => goToSlide(parseInt(dot.dataset.index)));
+  });
+
+  // Keyboard support
+  document.addEventListener('keydown', e => {
+    const ideasSection = document.getElementById('ideas');
+    const rect = ideasSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      if (e.key === 'ArrowLeft') goToSlide(currentSlide - 1);
+      if (e.key === 'ArrowRight') goToSlide(currentSlide + 1);
+    }
+  });
+
+  // Touch/swipe support
+  let touchStartX = 0;
+  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) goToSlide(diff > 0 ? currentSlide + 1 : currentSlide - 1);
+  }, { passive: true });
 </script>
 
 </body>
